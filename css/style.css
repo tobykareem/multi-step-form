@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  --Marineblue: hsl(213, 96%, 18%);
+  --Purplishblue: hsl(243, 100%, 62%);
+  --Pastelblue: hsl(228, 100%, 84%);
+  --Lightblue: hsl(206, 94%, 87%);
+  --Strawberryred: hsl(354, 84%, 57%);
+  --Coolgray: hsl(231, 11%, 63%);
+  --Lightgray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+  --para: 16px;
+  --family: "Ubuntu", "Sans-Serif";
+  --fw-semi: 400;
+  --fw-bold: 500;
+  --fw-xbold: 700;
+}
+body {
+  background-color: var(--Magnolia);
+}
+
+main {
+  background-image: url("../assets/images/bg-sidebar-mobile.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  position: relative;
+}
+/* main div{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 2rem;
+    border: 1px solid var(--White);
+} */
+.one,
+.two,
+.three,
+.four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 2rem;
+  border: 1px solid var(--White);
+}
+.one {
+  background-color: var(--Lightblue);
+  color: var(--Marineblue);
+}
+
+.nav-btn :nth-child(1):hover {
+  background-color: var(--Lightblue);
+  color: var(--Marineblue);
+}
+
+section {
+  width: 200px;
+  position: absolute;
+  top: 20%;
+  background-color: var(--Alabaster);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid var(--Marineblue);
+  outline: none;
+}
+.top h4,
+label {
+  color: var(--Marineblue);
+}
+p {
+  color: var(--Coolgray);
+}
+::placeholder {
+  color: var(--Coolgray) !important;
+}
+.next-btn {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--White);
+}
+.next-btn .btn {
+  right: -60%;
+  position: relative;
+  background-color: var(--Marineblue);
+  color: var(--Lightblue);
+}
+
+/* madia query */
+
+@media (min-width: 678px){
+  body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .main-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75vh;
+    background-color: var(--White);
+    padding: 15px;
+    border-radius: 10px;
+  }
+  main {
+    width: 30% !important;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("../assets/images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    background-position: 100%;
+    border-radius: 10px;
+  }
+  section {
+    width: 60% !important;
+    height: 70vh;
+    margin-top: 2.5rem;
+  }
+  main,
+  section {
+    position: static;
+    background-color: var(--White);
+  }
+
+  .nav-btn :nth-child(1) {
+    margin-top: 0;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-btn {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  .nav-content span {
+    color: var(--Coolgray);
+  }
+  .nav-content h5 {
+    color: var(--White);
+  }
+  form btn{
+    background-color: blue;
+    display: flex;
+  }
+}
